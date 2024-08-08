@@ -16,11 +16,12 @@ end
 if CLIENT then
     local cache
 	local lobby
+	local watchID  = "l-8boCp-nKk"
 	net.Receive("requestLobbyInterfaceCache",function()
 		lobby = vgui.Create("DHTML")
 		lobby:SetSize(ScrW(),ScrH())
-		local watchID  = "EColTNIbOko&t"
 		if(BRANCH=="x86-64") then
+			--src="https://www.youtube.com/embed/]]..watchID..[[?autoplay=1&playlist=]]..watchID..[[&loop=1&controls=0&mute=1"
 		lobby:SetHTML([[
 			<!DOCTYPE html>
 <html lang="en">
@@ -47,7 +48,7 @@ if CLIENT then
     <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/]]..watchID..[[?autoplay=1&playlist=]]..watchID..[[&loop=1&controls=0&mute=1"
+        src="https://www.youtube.com/embed/]]..watchID..[[?autoplay=1"
         frameborder="0"
         allowfullscreen
     ></iframe>
